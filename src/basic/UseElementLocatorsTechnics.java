@@ -117,28 +117,14 @@ WebDriver driver;
 		    driver.findElement(By.xpath("//*[@id=\"contentout\"]/table/tbody/tr/td[3]/div[1]/a")).click();
 		      
 		    // Click on Percent Calculators
-		    driver.findElement(By.xpath("//*[@id=\"content\"]/table[2]/tbody/tr/td/div/a[contains(text(),\"Percentage Calculator\")]")).click();
-		    ////*[@id="content"]/table[2]//a[contains(text(),"Percentage Calculator")]
-		    // Enter value 10 in the first number of the percent Calculator
-		  //*[@id="content"]/table[2]/tbody/tr/td/div[3]/a
-		  //*[@id="content"]/table[2]/tbody/tr/td/div/a[contains(text(),"Percentage Calculator")]
-
-		  //*[@id="content"]/table[2]/tbody//a[contains(text(),"Percentage Calculator")]
-
-		  //*[@id="content"]/table//a[contains(text(),"Percentage Calculator")]
-		    
-		    
-		    driver.findElement(By.id("cpar1")).sendKeys("10");
-		    
+		    driver.findElement(By.xpath("//*[@id=\"content\"]/table[2]/tbody/tr/td/div/a[contains(text(),\"Percentage Calculator\")]")).click();		      
+		    driver.findElement(By.id("cpar1")).sendKeys("10");		    
 		    // Enter value 50 in the second number of the percent Calculator
 		    driver.findElement(By.id("cpar2")).sendKeys("50");
 		    
 		    // Click Calculate Button
-		    driver.findElement(By.xpath(".//*[@id = 'content']/table/tbody/tr[2]/td/input[2]")).click();
-		    ////*[@id="content"]/table[1]/tbody//input[@value="Calculate"]
-		    // Get the Result Text based on its xpath
-		    String result = driver.findElement(By.xpath("//*[@id=\"content\"]/h2[1]")).getText();
-		    
+		    driver.findElement(By.xpath(".//*[@id = 'content']/table/tbody/tr[2]/td/input[2]")).click();		    
+		    String result = driver.findElement(By.xpath("//*[@id=\"content\"]/h2[1]")).getText();		    
 		    // Print a Log In message to the screen
 		    System.out.println("The actual output is: " + result);
 		      
