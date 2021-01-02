@@ -137,7 +137,8 @@ WebDriver driver;
 		try {
 			invokeBrowser("http://www.imdb.com");
 			//String trailerForTest = "Furious 7";
-			String trailerForTest = "Kuku";
+			String trailerForTest = "Peaky Blinders";
+			//String trailerForTest = "Kuku";
 			//Type “Furious 7” in search box
 			driver.findElement(By.id("suggestion-search")).sendKeys(trailerForTest);
 			driver.findElement(By.id("suggestion-search-button")).click();
@@ -149,14 +150,6 @@ WebDriver driver;
 		    if (result.contains(trailerForTest)) {
 		    	System.out.println("The trailer " + trailerForTest + " exists and is going to start");
 		    	driver.findElement(By.xpath("//table/tbody/tr/td[@class=\"result_text\"]/a[1]")).click();
-		    	// Play the trailer
-		    	//driver.findElement(By.cssSelector(".videoPreview__videoContainer > .slate_button")).click();
-		    	//driver.findElement(By.linkText(trailerForTest)).click();
-		        //driver.findElement(By.cssSelector(".videoPreview__videoContainer > .slate_button")).click();
-		    	//*[@id="videoPreviewEmbedIframe"]
-		    	//driver.findElement(By.xpath("//*[@id=\"videoPreviewEmbedIframe\"]")).click();
-		    	//JavascriptExecutor js = (JavascriptExecutor) driver;
-		    	//js .executeScript("document.getElementByXpath(\"video\").play()");
 		    	
 		    }
 		    else {
