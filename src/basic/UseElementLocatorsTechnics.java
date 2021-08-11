@@ -61,13 +61,11 @@ WebDriver driver;
 			driver.findElement(By.linkText("Customer Service")).click();
 			driver.navigate().back();
 			Thread.sleep(2000);
-			driver.findElement(By.partialLinkText("Deals")).click();
-			Thread.sleep(2000);
-			driver.navigate().back();			
 			System.out.println("Searching test is started");
 			driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Lenovo Laptops");
 			//driver.findElement(By.className("nav-input")).click();
 			driver.findElement(By.cssSelector("#nav-search-submit-text > .nav-input")).click();
+			System.out.println("The current URL is :" + driver.getCurrentUrl());
 			Thread.sleep(2000);
 			System.out.println("Searching test is finished");
 			driver.navigate().back();
@@ -76,8 +74,9 @@ WebDriver driver;
 			System.out.println("Sign In test is started");
 			driver.findElement(By.xpath("//a[@id='nav-link-accountList']/div/span")).click();
 			Thread.sleep(2000);
+			System.out.println("The current URL is :" + driver.getCurrentUrl());
 			System.out.println("Sign In test is finished");
-		} catch (Exception e) {
+		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
